@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Загрузка изображения</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+<div class="container">
+<h1>FastAPI + Шаблоны</h1>
+    <form action="/process" enctype="multipart/form-data" method="post">
+        <label>Выберите изображение: </label><br>
+        <input  name="file" type="file" accept="image/*" required><br><br>
+        <label>Угол поворота: </label>
+        <input type="number" name="angle" value="10" required><br><br>
+        <div class="g-recaptcha" data-sitekey="6Lc4WiIsAAAAAHc2V-XDPF4jqt3wo_EC40k1FDJu"></div>
+
+        <button type="submit">Обработать</button>
+    </form>
+</div>
+</body>
+</html>
