@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Обработанное изображение</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-<h1>Результат обработки</h1>
+<fieldset class="block">
+    <legend> Результат обработки</legend>
 
 <h2>Исходное изображение</h2>
 <img src="{{original}}" width="300">
 
 <h2>Повернутое изображение</h2>
 <img src="{{ rotated }}" width="300">
+</fieldset>
 
-<h3>Гистограммы оригинального изображения</h3>
-<img src="{{ r_orig }}" width="300">
-<img src="{{ g_orig }}" width="300">
-<img src="{{ b_orig }}" width="300">
+<fieldset class="block">
+<legend> Гистограммы оригинального изображения</legend>
+    <div class="hist-row">
+    <img src="{{ r_orig }}" width="300">
+    <img src="{{ g_orig }}" width="300">
+    <img src="{{ b_orig }}" width="300">
+    </div>
+</fieldset>
 
-<h3>Гистограммы повернутого изображения</h3>
-<img src="{{ r_rot }}" width="300">
-<img src="{{ g_rot }}" width="300">
-<img src="{{ b_rot }}" width="300">
+<fieldset>
+<legend>Гистограммы повернутого изображения</legend>
+    <div class="hist-row">
+    <img src="{{ r_rot }}" width="300">
+    <img src="{{ g_rot }}" width="300">
+    <img src="{{ b_rot }}" width="300">
+    </div>
+</fieldset>
 
 </body>
 </html>

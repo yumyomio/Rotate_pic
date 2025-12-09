@@ -4,7 +4,6 @@ from fastapi.templating import Jinja2Templates
 from PIL import Image
 from io import BytesIO
 
-import os
 import httpx
 
 from starlette.staticfiles import StaticFiles
@@ -83,9 +82,9 @@ async def process(request: Request, file: UploadFile = File(...), angle: int = F
             "request": request,
             "original": "/static/Images/original.png",
             "rotated": "/static/Images/rotated.png",
-            "r_imx": "/static/hist/r_histogram.png",
-            "g_imx": "/static/hist/g_histogram.png",
-            "b_imx": "/static/hist/b_histogram.png",
+            "r_orig": "/static/hist/r_histogram.png",
+            "g_orig": "/static/hist/g_histogram.png",
+            "b_orig": "/static/hist/b_histogram.png",
             "r_rot": "/static/hist/r_histogram_rot.png",
             "g_rot": "/static/hist/g_histogram_rot.png",
             "b_rot": "/static/hist/b_histogram_rot.png",
